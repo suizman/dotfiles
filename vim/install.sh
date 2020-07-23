@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [[ $(which node | wc -l) -eq 0 ]];
+then
+  echo "Nodejs missing, please install it. It's required for Coc plugin"
+  exit 1
+fi
+
 if [ ! -d ~/.vim/colors ];
 then
   echo "Installing Plug."
