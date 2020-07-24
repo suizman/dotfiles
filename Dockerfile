@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
-WORKDIR /tmp
+WORKDIR /tmp/test
 
 RUN apt-get update -qq &&      \
     apt-get install -qq -y     \
