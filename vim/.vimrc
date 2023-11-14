@@ -64,6 +64,7 @@ Plug 'jnurmine/Zenburn'
 Plug 'vim-airline/vim-airline'
 Plug 'tmhedberg/SimpylFold'
 Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'thedenisnikulin/vim-cyberpunk'
 " Configuration for coc.nvim
 
 set hidden
