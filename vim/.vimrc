@@ -53,16 +53,18 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Configuration for vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
 
+" Plugins
 Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tmhedberg/SimpylFold'
+Plug 'myusuf3/numbers.vim'
 
 " Themes
-Plug 'myusuf3/numbers.vim'
 Plug 'morhetz/gruvbox'
 Plug 'atahabaki/archman-vim'
 Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'jnurmine/Zenburn'
-Plug 'vim-airline/vim-airline'
-Plug 'tmhedberg/SimpylFold'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'thedenisnikulin/vim-cyberpunk'
 " Configuration for coc.nvim
