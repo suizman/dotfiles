@@ -14,7 +14,12 @@ then
   cp vim/.vimrc ~/.vimrc
   mkdir -p ~/.vim/colors
   yes | vim +PlugInstall +qall &>/dev/null
-  ln -s ~/.vim/plugged/gruvbox/colors/gruvbox.vim ~/.vim/colors/gruvbox.vim
+  echo "Activating Theme"
+  ln -s ~/.vim/plugged/vim-cyberpunk/colors/cyberpunk.vim ~/.vim/colors/cyberpunk.vim
+  echo "Activating Airline Theme"
+  rm ~/.vim/plugged/vim-airline-themes/autoload/airline/themes/cyberpunk.vim
+  ln -s ~/.vim/plugged/vim-cyberpunk/autoload/airline/cyberpunk.vim \
+    ~/.vim/plugged/vim-airline-themes/autoload/airline/themes/cyberpunk.vim
 else
   echo "Config already updated."
 fi

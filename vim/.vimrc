@@ -13,7 +13,12 @@ set textwidth=100
 " set colorcolumn=+1
 " set columns=100
 
-colorscheme gruvbox
+" Set theme 
+colorscheme cyberpunk
+let g:airline_theme='cyberpunk'
+set cursorline
+let g:cyberpunk_cursorline="default"
+
 map <F2> :NERDTreeToggle<CR>
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
@@ -62,7 +67,6 @@ Plug 'myusuf3/numbers.vim'
 
 " Themes
 Plug 'morhetz/gruvbox'
-Plug 'atahabaki/archman-vim'
 Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'jnurmine/Zenburn'
 Plug 'martinda/Jenkinsfile-vim-syntax'
