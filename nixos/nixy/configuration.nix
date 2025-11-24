@@ -109,6 +109,15 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   nixpkgs.config.allowUnfree = true;
+  
+  fonts.packages = with pkgs; [
+    liberation_ttf
+    # fira-code
+    # fira-code-symbols
+    nerd-fonts.fira-mono
+    nerd-fonts.fira-code
+  ];
+
   environment.systemPackages = with pkgs; [
    # Web tools
    wget
