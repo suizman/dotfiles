@@ -1,18 +1,16 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
-if [ ! -f ~/.config/fish/functions/_void.fish ];
-then
+set fisher_plugins "danhper/fish-ssh-agent edc/bass jorgebucaran/fish-bax jorgebucaran/fish-spark jethrokuan/z realiserad/fish-ai"
+
+if not test -f ~/.config/fish/functions/_void.fish
   echo "Installing fish goodies."
-  touch  ~/.config/fish/functions/_void.fish
-  curl -L https://get.oh-my.fish | fish
-  curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-  omf install slavic-cat
-  fish -c 'fisher install danhper/fish-ssh-agent'
-  fish -c 'fisher install edc/bass'
-  fish -c 'fisher install jorgebucaran/fish-bax'
-  fish -c 'fisher install jorgebucaran/fish-spark'
-  fish -c 'fisher install jethrokuan/z'
+  mkdir -p ~/.config/fish/functions
+  touch ~/.config/fish/functions/_void.fish
+  curl -sLo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+  for plugin in $fisher_plugins
+    fish -c "fisher install $plugin"
+  end
 else
   echo "Fish goodies already installed."
-fi
+end
 
