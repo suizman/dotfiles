@@ -121,28 +121,39 @@
   environment.systemPackages = with pkgs; [
    # Web tools
    wget
+
    # Shell
    fish
    zsh
    starship
+
    # Terminals
    kitty
+
    # System
    dig
    glances
    atop
    htop
    zip
+
    # Editors
    vim
    nano
    brave
+
    # Dev utils
    bat
    git
+   tig
    docker
    vscode
-   nodejs_24 
+
+   # Programming
+   nodejs_24
+   python3 
+   go
+ 
    # Themes
    ocs-url
    plank
