@@ -10,6 +10,8 @@ if not test -f ~/.config/fish/functions/_void.fish
   for plugin in $fisher_plugins
     fish -c "fisher install $plugin"
   end
+  curl -sS https://starship.rs/install.sh | sh
+  echo "starship init fish | source" >> ~/.config/fish/config.fish 
 else
   echo "Fish goodies already installed."
 end
