@@ -125,6 +125,8 @@
    # Shell
    fish
    zsh
+   # Directory jumper
+   zoxide
    starship
 
    # Terminals

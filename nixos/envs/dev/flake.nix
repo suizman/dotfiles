@@ -22,9 +22,9 @@
             # Programming
             git
             nodejs_24
-            python3
-            python3Packages.pip
-            python3Packages.virtualenv
+            python314
+            # python314Packages.pip
+            # python314Packages.virtualenv
             go
 
             # Web tools
@@ -33,6 +33,8 @@
             # Shell
             fish
             zsh
+            # Directory jumper: prefer zoxide over older `z` implementations
+            zoxide
             starship
 
             # Terminals
