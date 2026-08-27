@@ -5,6 +5,20 @@ config.font = wezterm.font('FiraCode Nerd Font Mono')
 config.font_size = 11.0
 config.harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1' }
 
+-- Physical keys avoid dead-key issues with the US International layout.
+config.keys = {
+  {
+    key = 'phys:Minus',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.SplitVertical({ domain = 'CurrentPaneDomain' }),
+  },
+  {
+    key = 'phys:Backslash',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.SplitHorizontal({ domain = 'CurrentPaneDomain' }),
+  },
+}
+
 -- Use X11 so GNOME/WhiteSur draws the native window decoration,
 -- including the macOS-style traffic-light controls.
 config.enable_wayland = false
