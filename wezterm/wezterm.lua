@@ -1,6 +1,10 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
+config.font = wezterm.font('FiraCode Nerd Font Mono')
+config.font_size = 11.0
+config.harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1' }
+
 -- Use X11 so GNOME/WhiteSur draws the native window decoration,
 -- including the macOS-style traffic-light controls.
 config.enable_wayland = false
