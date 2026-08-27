@@ -3,10 +3,8 @@
 import time
 import random
 import argparse
-import colorama
 import sys
 import select
-from colorama import Fore
 
 parser = argparse.ArgumentParser(description="This script prints an image file to the console. The --image argument is mandatory.")
 parser.add_argument("--image", required=True, help="image file to print")
@@ -21,7 +19,7 @@ with open(args.image, 'r') as file:
         print(character, end='', flush=True)
 
 text = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Wake the fuck up, Samurai!⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-colors = [Fore.RED, Fore.GREEN]
+colors = ["\033[38;2;255;0;81m", "\033[38;2;0;220;132m"]
 current_color_index = 0
 keystroke = 0
 
