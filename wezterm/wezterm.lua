@@ -17,6 +17,16 @@ config.keys = {
     mods = 'CTRL|ALT',
     action = wezterm.action.SplitHorizontal({ domain = 'CurrentPaneDomain' }),
   },
+  {
+    key = 'f',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.RotatePanes('Clockwise'),
+  },
+  {
+    key = 'b',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.RotatePanes('CounterClockwise'),
+  },
 }
 
 -- Use X11 so GNOME/WhiteSur draws the native window decoration,
