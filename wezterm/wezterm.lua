@@ -61,6 +61,22 @@ local function reset_pane_sizes(window, pane)
   )
 end
 
+local function move_pane_to_top_level(direction)
+  return wezterm.action_callback(function(_, pane)
+    wezterm.background_child_process({
+      wezterm.executable_dir .. '/wezterm',
+      'cli',
+      'split-pane',
+      '--top-level',
+      '--' .. direction,
+      '--percent',
+      '50',
+      '--move-pane-id',
+      tostring(pane:pane_id()),
+    })
+  end)
+end
+
 -- Physical keys avoid dead-key issues with the US International layout.
 config.keys = {
   {
@@ -82,6 +98,16 @@ config.keys = {
     key = 'b',
     mods = 'CTRL|ALT',
     action = wezterm.action.RotatePanes('CounterClockwise'),
+  },
+  {
+    key = 'h',
+    mods = 'CTRL|ALT',
+    action = move_pane_to_top_level('left'),
+  },
+  {
+    key = 'j',
+    mods = 'CTRL|ALT',
+    action = move_pane_to_top_level('right'),
   },
   {
     key = 'n',
