@@ -13,6 +13,7 @@ an animated Samurai greeting.
 - **Fish:** Samurai greeting, Starship, zoxide and optional plugins.
 - **Vim:** Vim-Plug, Coc and the Cyberpunk theme.
 - **Kitty:** legacy Kitty configuration and color scheme.
+- **Tmux:** mouse support and Catppuccin theme managed with TPM.
 
 ## Installation
 
@@ -30,6 +31,9 @@ already be installed.
 
 The same installer also installs Ghostty's configuration and theme in
 `~/.config/ghostty/`.
+
+It also installs `~/.tmux.conf`, TPM and the Catppuccin tmux theme. Tmux and
+Git must already be installed for the plugin to be downloaded automatically.
 
 ### Fish
 
