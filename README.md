@@ -7,6 +7,7 @@ an animated Samurai greeting.
 ## What's included
 
 - **WezTerm:** dark Scarlet Protocol theme with a compact neon tab bar.
+- **Ghostty:** local Scarlet Protocol theme matching the WezTerm palette.
 - **Starship:** single-line prompt with directory, Git status, command duration
   and exit status.
 - **Fish:** Samurai greeting, Starship, zoxide and optional plugins.
@@ -26,6 +27,9 @@ Clone the repository, enter it and run only the installers you need.
 Installs `~/.wezterm.lua` and `~/.config/starship.toml`. Existing files are
 backed up with a timestamp before being replaced. WezTerm and Starship must
 already be installed.
+
+The same installer also installs Ghostty's configuration and theme in
+`~/.config/ghostty/`.
 
 ### Fish
 

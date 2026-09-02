@@ -1,0 +1,6 @@
+# Ghostty configuration using the local Scarlet Protocol theme.
+theme = Scarlet Protocol
+
+# Match the bold Fira Code setup used by WezTerm.
+font-family = FiraCode Nerd Font Mono
+font-style = Bold

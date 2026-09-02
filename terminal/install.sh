@@ -20,3 +20,6 @@ install_config() {
 
 install_config "$repo_dir/wezterm/wezterm.lua" "$HOME/.wezterm.lua"
 install_config "$repo_dir/starship/starship.toml" "$HOME/.config/starship.toml"
+
+install_config "$repo_dir/ghostty/config.ghostty" "$HOME/.config/ghostty/config.ghostty"
+install_config "$repo_dir/ghostty/themes/Scarlet Protocol" "$HOME/.config/ghostty/themes/Scarlet Protocol"

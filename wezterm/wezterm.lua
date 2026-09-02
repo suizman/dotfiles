@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
-config.font = wezterm.font('FiraCode Nerd Font Mono')
+config.font = wezterm.font('FiraCode Nerd Font Mono', { weight = 'Bold' })
 config.font_size = 11.0
 config.harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1' }
 
@@ -79,6 +79,26 @@ end
 
 -- Physical keys avoid dead-key issues with the US International layout.
 config.keys = {
+  {
+    key = 'LeftArrow',
+    mods = 'CMD|ALT',
+    action = wezterm.action.ActivatePaneDirection('Left'),
+  },
+  {
+    key = 'RightArrow',
+    mods = 'CMD|ALT',
+    action = wezterm.action.ActivatePaneDirection('Right'),
+  },
+  {
+    key = 'UpArrow',
+    mods = 'CMD|ALT',
+    action = wezterm.action.ActivatePaneDirection('Up'),
+  },
+  {
+    key = 'DownArrow',
+    mods = 'CMD|ALT',
+    action = wezterm.action.ActivatePaneDirection('Down'),
+  },
   {
     key = 'phys:Minus',
     mods = 'CTRL|ALT',
