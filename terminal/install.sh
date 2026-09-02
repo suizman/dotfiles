@@ -40,8 +40,10 @@ install_tmux_plugins() {
   fi
 
   if command -v tmux >/dev/null 2>&1; then
-    tmux source-file "$HOME/.tmux.conf"
     "$tpm_dir/bin/install_plugins"
+    # Reload after installing plugins so an existing server picks up the
+    # current theme and its status-line settings immediately.
+    tmux source-file "$HOME/.tmux.conf"
   else
     printf 'Skipped tmux plugin installation: tmux is not installed.\n'
   fi
