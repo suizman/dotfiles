@@ -23,3 +23,4 @@ install_config "$repo_dir/starship/starship.toml" "$HOME/.config/starship.toml"
 
 install_config "$repo_dir/ghostty/config.ghostty" "$HOME/.config/ghostty/config.ghostty"
 install_config "$repo_dir/ghostty/themes/Scarlet Protocol" "$HOME/.config/ghostty/themes/Scarlet Protocol"
+install_config "$repo_dir/tmux/tmux.conf" "$HOME/.tmux.conf"
